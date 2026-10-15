@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: valo-kaj-bangladesh
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_NAME
+        value: "Valo Kaj Bangladesh"
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: "base64:Roty+zkoON44IMrf4ZjcIGK+e7QacZ40opbUHI6PrCU="
+      - key: APP_DEBUG
+        value: "false"
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: MAIL_MAILER
+        value: smtp
+      - key: MAIL_HOST
+        value: smtp.gmail.com
+      - key: MAIL_PORT
+        value: "587"
+      - key: MAIL_USERNAME
+        value: rafidul.labar.bd@gmail.com
+      - key: MAIL_PASSWORD
+        value: "grmn fhfu bdrp nejv"
+      - key: MAIL_ENCRYPTION
+        value: tls
+      - key: MAIL_FROM_ADDRESS
+        value: rafidul.labar.bd@gmail.com
+      - key: MAIL_FROM_NAME
+        value: "Valo Kaj Bangladesh"
